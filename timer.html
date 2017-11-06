@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Timer in Jquery</title>
+    <!--this is a very important code to make the jquery work on this page-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            var time = 30;
+
+            function redirect() {
+                var id = setTimeout(redirect, 1000); // function will fired for every one second
+                $(".timer").html(time);
+                if (time == 0) {
+                    // if time is zero redirect
+                    clearTimeout(id);
+                    window.location.href = "C:/Users/Owner/Desktop/tester2.html";
+                }
+
+                time--; // the the time decrease, from 30 to 0
+            }
+
+            // remember to call function redirect
+            redirect();
+        });
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Your game ends in <span class='timer'>0</span> Seconds</h1>
+    </center>
+</body>
+
+</html>

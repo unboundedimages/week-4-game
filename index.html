@@ -1,0 +1,88 @@
+<!--Crystal Collector Game-->
+<!--This game will contain instructions on how to play, output a random number,-->
+<!--collect and recod the win to loss ratio, display 4 jewel images, and ouput -->
+<!--a tally so the user will now how close they are to reaching the random number-->
+<!--I also want to figure out how to add a timerfor a personal bonus-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rodney's Awesome Crystal Collector Game</title>
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <h1>Crystal Collector</h1>
+    <section class='mainSectin'>
+        <!--the main sectin  will go here. -->
+        <div class='clock'>
+            <!--some how get the clock to stop the game and record the score-->
+            <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+            <script src="jquery.js"></script>
+            <script>
+                $(function() {
+                    var time = 30;
+
+                    function redirect() {
+                        var id = setTimeout(redirect, 1000); // function will fired for every one second
+                        $(".timer").html(time);
+                        if (time == 0) {
+                            // if time is zero redirect
+                            clearTimeout(id);
+                            window.location.href = "C:/Users/Owner/Desktop/tester2.html";
+                        }
+
+                        time--; // the the time decrease, from 30 to 0
+                    }
+
+                    // remember to call function redirect
+                    redirect();
+                });
+            </script>
+            <center>
+
+                <body>
+                    <h1>Your game ends in <span class='timer'>0</span> Seconds</h1>
+
+                </body>
+            </center>
+        </div>
+
+        <div id='manual'>
+            <!--Instructions will go here inside of the manual div.-->
+        </div>
+        <!--This div calls called container will house the counter for the random number, the win loss ratio,-->
+        <div class='container'>
+            <div id='randomNum'>
+                <!--This div will hold the randomly generated number-->
+                xyz
+            </div>
+            <div id='winLoss'>
+                <!--This div will show the win loss record-->
+                win loss
+            </div>
+            <div id='crystals'>
+                <!--Crystal images will go here.-->
+                jwl1 jwl2 jwl3 jwl4
+                <img src="/Homework/week-4-game/assets/images/blueJ.png"></img>
+                <img </div>
+            </div>
+
+            <div id='Score'>
+                <!--As I make my selections, the scores will tally here.-->
+                Tally Hoe!!!
+            </div>
+
+            <!-- Link to javascript game.js -->
+            <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    </section>
+
+    <script type="text/javascript" src="assets/javascript/games.js"></script>
+</body>
+
+</html>
