@@ -1,0 +1,35 @@
+.timer {
+    align-items: right;
+}
+
+.crystals {
+    background-color: black;
+}
+
+.crystals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.crystal {
+    /*border: 1px solid green;*/
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 3s, transform 3s;
+}
+
+.crystal:hover {
+    box-shadow: 30px 15px 15px rgba(0, 0, 0, 0.5);
+    transform: translate(2px, 20px);
+    cursor: pointer;
+    transition: box-shadow 2s, transform 3s;
+}
+
+img {
+    width: 50px;
+}
