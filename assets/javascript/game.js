@@ -13,7 +13,6 @@
 // The random number shown at the start of the game should be between 19 - 120.
 // Each crystal should have a random hidden value between 1 - 12.
 
-
 var randNum;
 var lost = 0;
 var win = 0;
@@ -69,52 +68,51 @@ startGame();
 
 $(document).on('click', ".crystal", function() {
 
-var num = parseInt($(this).attr('randomData'));
+    var num = parseInt($(this).attr('randomData'));
 
-prev += num;
+    prev += num;
 
-$("#tally").html("TALLY: " + prev);
-$("#win").html("Wins: " + win);
-$("#lost").html("Losses: " + lost);
+    $("#tally").html("TALLY: " + prev);
+    $("#win").html("Wins: " + win);
+    $("#lost").html("Losses: " + lost);
 
 
-console.log(prev)
+    console.log(prev)
 
-//log time oh oh oh oh oh oh ooooooh oh oooh.. get if else logic
-if (prev > randNum) {
-    lost++;
-    $("#lost").html(lost);
-    alert("YOU LOST!!! :(")
+    //log time oh oh oh oh oh oh ooooooh oh oooh.. get if else logic
+    if (prev > randNum) {
+        lost++;
+        $("#lost").html(lost);
+        alert("YOU LOST!!! :(")
 
-    prev = 0;
+        prev = 0;
 
-    startGame();
-}
-else if (prev === randNum) {
-    win++;
-    $("#win").html(win);
-    prev = 0;
-    startGame();
-    alert("YOU'RE A WINNER!!!")
+        startGame();
+    }
+    else if (prev === randNum) {
+        win++;
+        $("#win").html(win);
+        prev = 0;
+        startGame();
+        alert("YOU'RE A WINNER!!!")
 
-}
-// Timer has bugs
-// $(function() {
-//     var time = 30;
+    }
+    // Timer has bugs
+    // $(function() {
+    //     var time = 30;
 
-//     function redirect() {
-//         var id = setTimeout(redirect, 1000); // function will fired for every one second
-//         $(".timer").html(time);
-//         if (time == 0) {
-//             // if time is zero redirect
-//             clearTimeout(id);
-//             alert("TimesUP")
-//         }
+    //     function redirect() {
+    //         var id = setTimeout(redirect, 1000); // function will fired for every one second
+    //         $(".timer").html(time);
+    //         if (time == 0) {
+    //             // if time is zero redirect
+    //             clearTimeout(id);
+    //             alert("TimesUP")
+    //         }
 
-//         time--; // the the time decrease, from 30 to 0
-//     }
+    //         time--; // the the time decrease, from 30 to 0
+    //     }
 
-// remember to call function redirect
-redirect();
-});
+    // remember to call function redirect
+    redirect();
 });
